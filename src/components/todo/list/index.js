@@ -1,6 +1,8 @@
-import React from "react";
+import { useState } from "react";
 
-function List({ addTodos, todos }) {
+function List({ todos }) {
+  const [filterText, setFilterText] = useState("");
+
   return (
     <ul className="todo-list">
       {todos.map((todo, i) => (
